@@ -19,6 +19,7 @@
     position: relative;
     transition: all .25s;
     background-color: aliceblue;
+    cursor: pointer;
 }
 
 .button span {
