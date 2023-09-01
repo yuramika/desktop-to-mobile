@@ -1,0 +1,22 @@
+.copy-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    width: 300px;
+    height: 70px;
+    background-color: aliceblue;
+    border: rgb(202, 195, 168) solid 1px;
+    border-radius: 15px;
+    color: black;
+    opacity: 0;
+    font-size: 24px;
+}
+
+.copy-block_visible {
+    transform: all 0.3s ease;
+    opacity: 1;
+
+}

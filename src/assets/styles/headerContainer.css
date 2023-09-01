@@ -1,0 +1,15 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    color: rgb(255, 192, 192);
+}
+
+.header-container__title {
+    font-size: 50px;
+    text-align: center;
+    padding: 15px 0 20px 0;
+}
