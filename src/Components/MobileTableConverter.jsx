@@ -31,7 +31,7 @@ function MobileTableConverter() {
         generatedCode += `
           <div class="mobile-table__section">
             <div class="mobile-table__row">
-              <div class="mobile-table__key" width="60%"><strong>[nobr]${cells[0].textContent}[/nobr]</strong></div>
+              <div class="mobile-table__key" width="30%"><strong>[nobr]${cells[0].textContent}[/nobr]</strong></div>
               <div class="mobile-table__value" width="70%"></div>
             </div>`;
 
