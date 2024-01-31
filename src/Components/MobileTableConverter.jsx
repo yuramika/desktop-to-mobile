@@ -50,8 +50,8 @@ function MobileTableConverter() {
       generatedCode += `
         <div class="mobile-table__section">
           <div class="mobile-table__row">
-            <div class="mobile-table__key" width="30%"><strong>[nobr]${cells[0].textContent}[/nobr]</strong></div>
-            <div class="mobile-table__value" width="70%"></div>
+            <div class="mobile-table__key" colspan="2"><strong>${cells[0].textContent}</strong></div>
+            <div class="mobile-table__value"></div>
           </div>`;
 
       for (let columnIndex = 1; columnIndex < headerCells.length; columnIndex++) {
@@ -72,7 +72,7 @@ function MobileTableConverter() {
     });
 
 
-    generatedCode = ` <div class="mobile-table" style="max-width: 340px;">
+    generatedCode = ` <div class="mobile-table" style="max-width: 340px;" widths="30%, 70%">
       ${generatedCode}
     </div>
   `;
