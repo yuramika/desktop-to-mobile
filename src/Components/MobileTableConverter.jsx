@@ -23,7 +23,7 @@ function MobileTableConverter() {
       const headerCells = desktopTable.querySelectorAll("thead th");
       const rows = desktopTable.querySelectorAll("tbody tr");
 
-      let generatedCode = ` <div class="mobile-table" style="max-width: 340px;">`;
+      let generatedCode = ` <div class="mobile-table" style="max-width: 340px;" widths="30%, 70%">`;
 
       rows.forEach((row, rowIndex) => {
         const cells = row.querySelectorAll("td");
@@ -31,8 +31,8 @@ function MobileTableConverter() {
         generatedCode += `
           <div class="mobile-table__section">
             <div class="mobile-table__row">
-              <div class="mobile-table__key" width="30%"><strong>[nobr]${cells[0].textContent}[/nobr]</strong></div>
-              <div class="mobile-table__value" width="70%"></div>
+              <div class="mobile-table__key" colspan="2"><strong>${cells[0].textContent}</strong></div>
+              <div class="mobile-table__value"></div>
             </div>`;
 
         for (let columnIndex = 1; columnIndex < headerCells.length; columnIndex++) {
@@ -61,7 +61,7 @@ function MobileTableConverter() {
       const rows = desktopTable.querySelectorAll("tbody tr");
 
       let generatedCode = `
-      <div class="mobile-table" style="max-width: 340px;">
+      <div class="mobile-table" style="max-width: 340px;" widths="70%, 30%">
         <div class="mobile-table__section">
       `;;
 
@@ -73,8 +73,8 @@ function MobileTableConverter() {
 
         generatedCode += `
           <div class="mobile-table__row">
-            <div class="mobile-table__key" width="70%" align="left">${cells[0].textContent}</div>
-            <div class="mobile-table__value" width="30%">${cells[1].textContent}</div>
+            <div class="mobile-table__key" align="left">${cells[0].textContent}</div>
+            <div class="mobile-table__value">${cells[1].textContent}</div>
           </div>`;
       });
 
